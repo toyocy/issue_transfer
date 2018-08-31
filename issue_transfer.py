@@ -16,13 +16,22 @@ def test_run():
   }
 
   res = requests.get(REDMINE_URL, params=payload)
+  connecting_result = ""
   if (res.status_code == 200):
-    print("Response Code:" + str(res.status_code))
-    print("Get Issue [OK]")
+    connecting_result = "[OK]"
   else:
-    print(res)
-    print("Get Issue [NG]")
+    connecting_result = "[NG]"
 
+  get_issue_result = ""
+  item = res.json()
+
+  if (item["issues"]):
+    get_issue_result = "[OK]"
+  else:
+    get_issue_result = "[NG]"
+
+  print("Connecting Redmine ----- " + connecting_result)
+  print("Get Issue -------------- " + get_issue_result)
   sys.exit()
 
 def get_issue_list(args):
@@ -105,7 +114,7 @@ def main():
 
     actions.append({'_op_type':'index','_id':issue['id'], '_index':es_index, '_type':es_type, '_source':data})
 
-    if len(actions) > 1000:
+    if len(actions) > 2000:
       helpers.bulk(es, actions)
       actions = []
       

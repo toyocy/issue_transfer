@@ -9,9 +9,9 @@
       "type": "python",
       "request": "launch",
       "program": "${file}",
-      // "args": [
-      //   "--initial"
-      // ]
+      "args": [
+        "--testrun"
+      ]
     }
   ]
 }

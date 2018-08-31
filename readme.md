@@ -4,24 +4,24 @@
 
 ## Installation
 
-1. pip install -r requirements.txt
+1. pip install -r requirement.txt
 2. edit 'secrets.py.sample' and rename 'secrets.py'
 3. run test mode
 ```sh
   python3 issue_transfer.py --testrun
 ```
 
-result
+result example
 
 ```sh
-Response Code:200
-Get Issue [OK]
+Connecting Redmine ----- [OK]
+Get Issue -------------- [OK]
 ```
 
 ## Run mode
 
 ### Get all issues on Redmine
-Get all issues whole of Redmine.
+Get all issues of Redmine.
 ```sh
 python3 issue_transfer.py --initial
 ``` 
