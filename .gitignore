@@ -109,7 +109,8 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
-secrets.py
+secret.py
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
