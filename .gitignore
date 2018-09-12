@@ -109,7 +109,7 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
-secret.py
+secrets.py
 
 .vscode/*
 !.vscode/settings.json
@@ -129,3 +129,6 @@ secret.py
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+
+# temp
+.circleci
